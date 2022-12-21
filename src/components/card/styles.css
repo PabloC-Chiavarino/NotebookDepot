@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 420px;
+
+}
+.card__img {
+    width: 360px;
+}
+.card__name {
+
+}
+.card__detail {
+    height: 220px;
+    width: 320px
+}
+.card__price {
+
+}
+.card__buttons--container {
+    display: flex;
+}
+.card__button {
+
+}
+.card__button--minus {
+
+}
+.card__button--plus {
+
+}
+.card__stock {
+
+}

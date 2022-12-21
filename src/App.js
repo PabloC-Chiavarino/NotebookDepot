@@ -10,7 +10,7 @@ function App() {
       <header>
         <NavBar />
       </header>
-        <section>
+        <section className='products__container'>
           {PRODUCTS.map((product) => (
             <Card product={product} key={product.id} />
           ))}
