@@ -5,14 +5,18 @@
     display: flex;
     position: fixed;
     width: 100%;
+    opacity: 0.95;
 }
 
 .logo__container {
     display:flex;
+    text-shadow:1px 1px 2px black;
+    transition: 0.2s;
 }
 
 .logo__container:hover {
     cursor: pointer;
+    text-shadow:3px 3px 3px black;
 }
 
 .logo__title {
@@ -31,7 +35,7 @@
     margin-left: 5.2rem;
     font-size: 1.1rem;
     padding-top: 2px;
-    color: gainsboro;
+    color:gainsboro;
 }
 
 .categories__list {
@@ -41,16 +45,21 @@
     justify-content: flex-end;
     margin: auto 15% auto auto;
     padding: 1.3rem;
-    font-family: 'Anton', sans-serif;
     letter-spacing: 1px;
     padding-bottom: 0px;
+}
+
+.categories {
+    font-family: 'Anton', sans-serif;
     color: gainsboro;
+    transition: 0.2s;
+    text-shadow:0.5px 0.5px 1px black;
 }
 
 .categories:hover {
     cursor: pointer;
     text-decoration: none;
-    text-shadow:1px black;
+    color: white;
 }
 
 .cartContainer {
@@ -62,8 +71,8 @@
     border-radius: 50%;
     background-color: rgb(243, 134, 0);
     color: white;
-    width: 18px;
-    height: 14px;
+    width: 21px;
+    height: 17px;
     font-size: 14px;
     margin: 25px 0px 0px 47px;
     z-index: 1;
@@ -75,8 +84,8 @@
     top: 1.6rem;
     position: absolute;
     right: 1.4rem;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 }
 
 .cartContainer__img:hover {
