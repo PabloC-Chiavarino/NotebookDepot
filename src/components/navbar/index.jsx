@@ -15,9 +15,7 @@ const NavBar = () => {
                 <li className="categories">Gaming</li>
             </ul>
             <div className="cartContainer">
-                <div className="cartContainer__count">
-                    <p>0</p>
-                </div>
+                <div className="cartContainer__count">0</div>
                 <img className="cartContainer__img" src={cartImg} alt="" />
             </div>
         </nav>
