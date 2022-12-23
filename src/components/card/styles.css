@@ -15,7 +15,7 @@
 }
 
 .card:hover {
-    background-color: gainsboro;
+    background-color: rgb(236, 236, 236);
     cursor: pointer;
     transform: scale(1.02);
 }
@@ -59,6 +59,7 @@
 .card__buttons--container {
     display: flex;
     flex-direction: column;
+    height: 120px;
 }
 
 .card__buttons--subContainer {
@@ -73,8 +74,14 @@
 
 .card__input {
     width: 20px;
-    height: 20px;
-    margin: 0.3rem 2rem 0 2rem;
+    height: 25px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+    opacity: 0.8;
+    background: transparent;
+    outline: none;
 }
 
 .card__buttons--plus {
@@ -85,7 +92,6 @@
     display: flex;
     width: 100%;
     height: 25px;
-    margin-top: 10px;
 }
 
 .card__stock {
@@ -95,20 +101,19 @@
 }
 
 .card__buttons--add {
-    background-color: black;
-    color: white;
+    background-color: rgb(40, 40, 40);
+    color: rgb(201, 201, 201);
     border: none;
     width: 145px;
     height: 40px;
     margin: auto;
     font-size: 0.9rem;
-    transition: 0.2s;
+    transition: 0.3s;
+    border-radius: 3rem;
 }
 
 .card__buttons--add:hover {
     cursor: pointer;
-    background-color: darkgray;
-    color: black;
-    font-weight: bold;
-    font-size: 13px;
+    background-color: rgb(158, 158, 158);
+    color: rgb(240, 240, 240);
 }

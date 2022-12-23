@@ -40,7 +40,8 @@
 .products__container {
   display: flex;
   min-width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   padding-top: 100px;
+  gap: 1rem;
 }

@@ -68,10 +68,10 @@
 }
 
 .cartContainer__count {
-    border-radius: 50%;
+    border-radius: 3rem;
     background-color: rgb(243, 134, 0);
     color: white;
-    width: 21px;
+    width: 20px;
     height: 17px;
     font-size: 14px;
     margin: 25px 0px 0px 47px;
@@ -84,8 +84,8 @@
     top: 1.6rem;
     position: absolute;
     right: 1.4rem;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 }
 
 .cartContainer__img:hover {

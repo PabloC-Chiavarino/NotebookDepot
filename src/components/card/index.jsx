@@ -18,7 +18,7 @@ const Card = ({ product }) => {
             <div className="card__buttons--container">
                 <div className="card__buttons--subContainer">
                     <img className="card__buttons--minus" src={minusImg} alt="-" />
-                    <input className="card__input" type="text" />
+                    <input className="card__input" type="text" readOnly="readonly" />
                     <img className="card__buttons--plus" src={plusImg} alt="+" />
                 </div>
                 <button className="card__buttons--add">Agregar al carrito</button>
