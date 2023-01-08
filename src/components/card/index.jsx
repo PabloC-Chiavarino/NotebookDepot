@@ -1,12 +1,15 @@
 import React from "react";
-import './styles.css';
 import minusImg from '../../assets/icons/minus.png';
 import plusImg from '../../assets/icons/plus.png';
+import './styles.css';
 
 const Card = ({ product }) => {
     const {category, id, name, img, detail, price, stock} = product || {};
     return (
         <div className="card">
+            <div className="card__more">
+                <p style={{margin:0}}>+ detalles</p>
+            </div>
             <img className="card__img" src={img} alt="" />
             <h4 className="card__name">{name}</h4>
             <div className="card__detail--container">

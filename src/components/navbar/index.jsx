@@ -2,7 +2,7 @@ import React from "react";
 import './styles.css'
 import cartImg from '../../assets/icons/shopping-cart.png'
 
-const NavBar = () => {
+const NavBar = ({onCartClick}) => {
     return (
         <nav className="navBar">
             <div className="logo__container">
@@ -14,7 +14,7 @@ const NavBar = () => {
                 <li className="categories">Diseño y desarrollo</li>
                 <li className="categories">Gaming</li>
             </ul>
-            <div className="cartContainer">
+            <div onClick={onCartClick} className="cartContainer">
                 <div className="cartContainer__count">0</div>
                 <img className="cartContainer__img" src={cartImg} alt="" />
             </div>

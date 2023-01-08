@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f3f3f3;
 }
 
 .App-logo {
@@ -43,5 +44,5 @@
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 100px;
-  gap: 1rem;
+  gap: 3rem;
 }
