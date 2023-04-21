@@ -1,0 +1,10 @@
+.default_container {
+    position: absolute;
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}

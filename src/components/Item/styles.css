@@ -1,0 +1,87 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 260px;
+    font-family: 'Anton', sans-serif;
+    box-shadow: 1px 1px 3px rgb(46, 46, 46);
+    margin-top: 50px;
+    transition: 0.25s;
+    z-index: 1;
+    position: relative;
+    top: 100px;
+}
+
+.card:hover {
+    background-color: rgb(204, 204, 204);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.card__more {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 10px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.card__img {
+    width: 205px;
+    margin-bottom: -25px;
+    margin-top: -20px;
+}
+
+.card__name {
+    font-size: 1.2rem;
+    margin-bottom: -10px;
+    color: rgb(50, 50, 50);
+    font-weight: unset;
+}
+
+.card__detail--container {
+    display: flex;
+    flex-direction: column;
+    max-height: 130px;
+}
+
+.card__detail {
+    font-size: 14px;
+    padding: 5px;
+    color: rgb(40, 40, 40);
+    letter-spacing: 0.5px;
+}
+
+.card__price--container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 10px;
+}
+
+.card__price {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: rgb(50, 50, 50);
+    letter-spacing: 0.7px;
+}
+
+.card__stock--container {
+    display: flex;
+    width: 100%;
+    height: 25px;
+    margin-top: 30px;
+}
+
+.card__stock {
+    font-size: 0.8rem;
+    color: green;
+}

@@ -1,0 +1,43 @@
+.bagContainer {
+    width: 75px;
+    background-color: rgba(220,220,220);
+    height: inherit;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bagContainer:hover {
+    cursor: pointer;
+}
+
+.bagContainer__count {
+    background-color: rgba(220,220,220);
+    color: #625ec4;
+    font-family: 'anton', sans-serif;
+    font-size: 15px;
+    z-index: 1;
+    margin-top: 11px;
+    margin-right: 1px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+    top: 1.5px;
+    user-select: none;
+}
+
+.bagContainer__img {
+    top: 1.1rem;
+    position: absolute;
+    right: 1.3rem;
+    width: 34px;
+    height: 34px;
+}
+
+.bagContainer__img:hover {
+    cursor: pointer;
+}
