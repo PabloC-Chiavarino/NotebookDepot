@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import './styles.css'
 
-const MainBtn = ({ text='Volver' }) => {
+const BackBtn = ({ text='Volver' }) => {
     const navigate = useNavigate()
     const goBack = () => navigate(-1)
 
@@ -10,4 +10,4 @@ const MainBtn = ({ text='Volver' }) => {
     )
 }
 
-export default MainBtn
+export default BackBtn

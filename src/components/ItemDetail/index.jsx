@@ -1,5 +1,5 @@
 
-import { ItemCount, MainBtn } from '../../components'
+import { ItemCount, BackBtn } from '../../components'
 import './styles.css'
 
 const ItemDetail = ({ product }) => {
@@ -24,7 +24,7 @@ const ItemDetail = ({ product }) => {
                     </div>
                 </div>
                 <ItemCount />
-                <MainBtn />
+                <BackBtn />
             </div>
         </>
     )

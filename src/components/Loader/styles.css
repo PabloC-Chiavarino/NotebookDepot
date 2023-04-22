@@ -27,7 +27,7 @@
 
 .loader__container {
     display: flex;
-    width: 150px;
+    width: 270px;
     height: 100px;
     position: absolute;
     z-index: 2;

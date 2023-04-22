@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
-import { MainBtn } from '../../components';
 import minusImg from '../../assets/icons/minus.png'
 import plusImg from '../../assets/icons/plus.png'
 import "./styles.css";
@@ -23,7 +21,7 @@ const ItemCount = () => {
         <input className="card__input" type="text" readOnly="readonly" />
         <img className="card__buttons--plus" src={plusImg} alt="+" onClick={itemAdd} />
       </div>
-      <MainBtn text={'Agregar producto'} />
+      <button className='mainBtn'>Agregar producto</button>
     </div>
   )
 };

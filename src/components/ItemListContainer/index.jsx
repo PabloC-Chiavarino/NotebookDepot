@@ -22,7 +22,7 @@ const ItemListContainer = () => {
         <section className='products__container'>
             {loading ? (
                 categoryId ? (
-                    <Loader greeting={`Cargando ${categoryId} ...`} />
+                    <Loader greeting={`Cargando ${categoryId}`} />
                 ) : (
                     <Loader greeting={`Bienvenido`} />
                 )
