@@ -3,12 +3,12 @@ import minusImg2 from "../../assets/icons/minus.png"
 import trashImg from "../../assets/icons/bin.png"
 import "./styles.css"
 
-const Slider = ({ show, onClose }) => {
+const Slider = ({ onSliderState, onClose }) => {
 
   return (
     <div
       className="slider__container"
-      style={{ transform: show ? "translateX(0)" : "translateX(100%)" }}
+      style={{ transform: onSliderState ? "translateX(0)" : "translateX(100%)" }}
     >
       <div onClick={onClose} className="slider__closeButton">X</div>
       <h3 className="slider__title">Productos</h3>
@@ -28,7 +28,7 @@ const Slider = ({ show, onClose }) => {
       </div>
       <h4 className="slider__totalPrice">Total:</h4>
       <div className="slider__mainBtn--container">
-        <Link to={'/cart'} className="slider__mainBtn">Ir al carrito</Link>
+        <Link to={'/cart'} className="slider__mainBtn">Ir al carrito / Continuar</Link>
       </div>
     </div>
   );

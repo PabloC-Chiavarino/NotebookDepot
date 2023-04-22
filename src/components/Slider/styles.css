@@ -13,6 +13,7 @@
     background-color: #8987c1;
     transition: 0.3s ease-out;
     user-select: none;
+    border: 1px solid navajowhite;
 }
 
 .slider__closeButton {

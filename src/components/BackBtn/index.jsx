@@ -3,10 +3,10 @@ import './styles.css'
 
 const BackBtn = ({ text='Volver' }) => {
     const navigate = useNavigate()
-    const goBack = () => navigate(-1)
+    const handleOnClick = () => navigate(-1)
 
     return (
-        <button className='mainBtn' onClick={goBack}>{text}</button>
+        <button className='mainBtn' onClick={handleOnClick}>{text}</button>
     )
 }
 
