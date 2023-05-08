@@ -1,33 +1,113 @@
-.cart__container {
+.cart--container {
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
-.cart__homeBtn {
+.cart__title--container {
+    width: 100%;
+    position: absolute;
+    top: 75px;
+}
+
+.cart__title {
+    font-size: 30px;
+    font-family: 'orbitron';
+    padding-left: 25px;
+}
+
+
+.cart__list--container {
+    font-size: 19px;
+    height: 50%;
+    width: 85%;
+    position: absolute;
+    top: 115px;
+    overflow-y: auto;
+    font-family: 'anton';
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+}
+
+.cart__empty {
+    position: relative;
+    font-family: 'orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart__total--container {
+    position: absolute;
+    font-family: 'anton';
+    width: 70%;
+    bottom: 102px;
+    color: rgb(2, 64, 0);
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart__options--container{
+    color: transparent;
+    align-items: end;
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    width: 37%;
+    position: relative;
+    font-size: 12px;
+    top: 165px;
+    font-family: 'orbitron';
+}
+
+.cart__confirm--container{
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 45px;
-    text-decoration: none;
-    border: none;
-    width: 235px;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgb(40, 40, 40);
-    color: rgb(212, 212, 212);
-    border: none;
-    transition: 0.3s;
-    border-radius: 5px;
-    letter-spacing: 0.5px;
-    font-size: 14px;
+    gap: 10px;
 }
 
-.cart__homeBtn:hover {
-    cursor: pointer;
-    background-color: rgb(201, 201, 201);
+.cart__confirm--container:hover {
     color: black;
-    font-weight: bold;
+}
+
+.cart__confirm {
+    width: 65px;
+    transition: 0.2s;
+}
+
+.cart__confirm:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    color: blac
+}
+
+.cart__erase--container {
+    display: flex;
+    align-items: center;
+}
+
+.cart__erase--container:hover {
+    color: black;
+}
+
+.cart__erase {
+    transition: 0.2s;
+    width: 70px;
+}
+
+.cart__erase:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    color: black;
+}
+
+.navigate__options--container {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: 40px;
 }

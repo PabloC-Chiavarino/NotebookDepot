@@ -1,0 +1,6 @@
+export {default as minusImg} from '../icons/minus.png'
+export {default as plusImg} from '../icons/plus.png'
+export {default as cartImg} from '../icons/shopping-cart.png'
+export {default as binImg} from '../icons/bin.png'
+export {default as binBig} from '../icons/binBig.png'
+export {default as confirmImg} from '../icons/check-mark2.png'

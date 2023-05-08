@@ -3,17 +3,17 @@
     flex-direction: column;
     height: fit-content;
     position: absolute;
-    top: 200px;
-    right: 50px;
-    height: 100px;
+    bottom: 75px;
+    right: 60px;
+    height: fit-content;
     width: 240px;
 }
 
 .card__buttons--subContainer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 33px;
+    justify-content: space-evenly;
+    gap: 30px;
   }
 
 .card__buttons--minus, .card__buttons--plus {
@@ -29,17 +29,20 @@
 }
 
 .card__input {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 30px;
     text-align: center;
     border: 1px solid darkgrey;
     border-radius: 3px;
     opacity: 0.8;
     background: transparent;
     outline: none;
+    font-family: 'anton', sans-serif;
+    font-size: 1rem;
+    position: absolute;
 }
 
-.mainBtn {
+.addBtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,16 +53,13 @@
     font-family: 'Orbitron', sans-serif;
     background-color: rgb(40, 40, 40);
     color: rgb(212, 212, 212);
-    border: none;
     transition: 0.3s;
-    border-radius: 5px;
     letter-spacing: 0.5px;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 40px;
-    position: absolute;
 }
 
-.mainBtn:hover {
+.addBtn:hover {
     cursor: pointer;
     background-color: rgb(201, 201, 201);
     color: rgb(87, 87, 87);

@@ -1,14 +1,13 @@
 
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { ItemDetailContainer, ItemListContainer } from '../components';
-import { Cart, NotFound404  } from '../pages'
+import { Cart, NotFound404, Default, Detail } from '../pages'
 
 const Router = () => {
     return (
         <Routes>
-            <Route path='/home' element={<ItemListContainer />} />
-            <Route path='/categories/:categoryId' element={<ItemListContainer />} />
-            <Route path='/product/detail/:productId' element={<ItemDetailContainer />} />
+            <Route path='/home' element={<Default />} />
+            <Route path='/categories/:categoryId' element={<Default />} />
+            <Route path='/categories/:categoryId/product/detail/:productId' element={<Detail />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/404' element={<NotFound404 />} />
             

@@ -1,30 +1,32 @@
-
-import { ItemCount, BackBtn } from '../../components'
+import { useCartContext } from '../../hooks'
+import { ItemCount } from '../../components'
 import './styles.css'
 
 const ItemDetail = ({ product }) => {
 
+    const {img, name, detail, price, stock} = product
+
+    const { cartAdd } = useCartContext()
+
+    const handleOnAdd = (quantity) => {
+        cartAdd({...product, quantity})
+    }
+    
     return (
         <>
             <div className='detail__container'>
-                <div className="card">
-                    <div className="card__more">
-                        <p style={{margin:0, letterSpacing:'1px'}}>+ detalles</p>
+                    <img className="detail__img" src={img} alt="TEST" />
+                    <h2 className="detail__name">{name}</h2>
+                    <div className="detail__description--container">
+                        <p className="detail__description">{detail}</p>
                     </div>
-                    <img className="card__img" src={product?.img} alt="TEST" />
-                    <h4 className="card__name">{product?.name}</h4>
-                    <div className="card__detail--container">
-                        <p className="card__detail">{product?.detail}</p>
+                    <div className="detail__price--container">
+                        <p className="detail__price">${price}</p>
                     </div>
-                    <div className="card__price--container">
-                        <p className="card__price">${product?.price}</p>
+                    <div className="detail__stock--container">
+                        <p className="detail__stock">{stock} in stock</p>
                     </div>
-                    <div className="card__stock--container">
-                        <p className="card__stock">{product?.stock} in stock</p>
-                    </div>
-                </div>
-                <ItemCount />
-                <BackBtn />
+                <ItemCount avaiableStock={stock} onAdd={handleOnAdd} />
             </div>
         </>
     )

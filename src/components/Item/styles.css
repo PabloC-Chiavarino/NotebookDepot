@@ -7,6 +7,7 @@
     margin: 0.5rem;
     padding: 1rem;
     width: 260px;
+    min-height: 500px;
     font-family: 'Anton', sans-serif;
     box-shadow: 1px 1px 3px rgb(46, 46, 46);
     margin-top: 50px;
@@ -64,11 +65,11 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 10px;
+    top: 50px;
 }
 
 .card__price {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bolder;
     color: rgb(50, 50, 50);
     letter-spacing: 0.7px;
@@ -77,8 +78,8 @@
 .card__stock--container {
     display: flex;
     width: 100%;
-    height: 25px;
-    margin-top: 30px;
+    position: relative;
+    top: 60px;
 }
 
 .card__stock {

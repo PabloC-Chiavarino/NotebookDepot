@@ -4,8 +4,8 @@ import { BlurModal, CartWidget, Slider } from "../../components";
 import "./styles.css";
 
 const NavBar = () => {
-  const [ itShow, setItShow ] = useState(false)
-  const onHandleState = () => setItShow(!itShow)
+  const [ shownState, setShownState ] = useState(false)
+  const handleState = () => setShownState(!shownState)
   
   return (
     <>
@@ -22,11 +22,11 @@ const NavBar = () => {
             <NavLink to={'/categories/professional'} className="categories"><li>Diseño y desarrollo</li></NavLink>
             <NavLink to={'/categories/gaming'} className="categories"><li>Gaming</li></NavLink>
           </ul>
-          <CartWidget handleOnClick={onHandleState} />
-          <Slider onSliderState={itShow} onClose={onHandleState}/>
+          <CartWidget handleOnClick={handleState} />
+          <Slider show={shownState} onClose={handleState}/>
         </div>
       </nav>
-      <BlurModal onBlurState={itShow} />
+      <BlurModal show={shownState} handleOnClick={handleState} />
     </>
   )
 }

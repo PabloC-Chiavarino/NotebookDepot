@@ -1,5 +1,5 @@
+import { NavBar } from './components'
 import Router from './router'
-import { NavBar, ItemListContainer } from './components'
 
 function App () {
 

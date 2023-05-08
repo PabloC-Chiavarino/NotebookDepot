@@ -1,11 +1,11 @@
-
 import './styles.css'
 
-const BlurModal = ({ onBlurState }) => {
+const BlurModal = ({ show, handleOnClick }) => {
     return (
         <div 
         className='blurModal'
-        style={{ display: onBlurState ? 'block' : 'none' }}
+        style={{ display: show ? 'block' : 'none' }}
+        onClick={handleOnClick}
         />
     )
 }

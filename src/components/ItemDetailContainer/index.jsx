@@ -1,28 +1,32 @@
-import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useDelayFetch } from '../../hooks'
-import { URL_BASE, URL_ENDPOINTS } from '../../constants/services'
-import { Loader, ItemDetail } from '../../components'
+import { useFirestore } from '../../hooks'
+//import { useDelayFetch } from '../../hooks'
+//import { URL_BASE, URL_ENDPOINTS } from '../../constants/services'
+import { Loader, ItemDetail, MainBtn } from '../../components'
 import "./styles.css"
 
 const ItemDetailContainer = () => {
     
-    const { loading, data } = useDelayFetch(`${URL_BASE}${URL_ENDPOINTS.PRODUCTS}`)    
-    
     const { productId } = useParams()
-    const [ product, setProduct ] = useState({})
-    
-    useEffect( () => {
-            let selected = data.find(prod => prod.id === productId )
-            console.log(product)
-            setProduct(selected)
-    }, [data])
+    //const { loading, data } = useDelayFetch(`${URL_BASE}${URL_ENDPOINTS.PRODUCTS}`)
+    //const [ product, setProduct ] = useState({})
+    const { loading, data } = useFirestore('unity', productId)
+    console.log(data)
+    // useEffect( () => {
+    //         let selected = data.find(prod => prod.id === productId )
+    //         setProduct(selected)
+    // }, [data])
     
     return (
         <>  
             <div className='product__Detailcontainer' >
                 {loading ? <Loader greeting={'Cargando'}/> : (
-                    <ItemDetail product={product} />
+                    <>
+                        <ItemDetail product={data} />
+                        <div className='backBtn--container'>
+                            <MainBtn text='Volver' />
+                        </div>
+                    </>
                     )}
             </div>
         </>

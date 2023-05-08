@@ -1,27 +1,31 @@
-import { useState } from 'react'
-import minusImg from '../../assets/icons/minus.png'
-import plusImg from '../../assets/icons/plus.png'
+import { useCounter } from '../../hooks';
+import { minusImg, plusImg } from '../../assets/icons';
 import "./styles.css";
 
-const ItemCount = () => {
-  const [ count, setCount ] = useState(0)
-  
-  const itemAdd = (provName) => {
-    setCount(count + 1)
-  }
+const ItemCount = ({ avaiableStock, onAdd }) => {
 
-  const itemSubtract = (provName) => {
-    setCount(count - 1)
-  }
+  const { quantity, plus, minus } = useCounter()
 
   return (
     <div className="card__buttons--container">
       <div className="card__buttons--subContainer">
-        <img className="card__buttons--minus" src={minusImg} alt="-" onClick={itemSubtract} />
-        <input className="card__input" type="text" readOnly="readonly" />
-        <img className="card__buttons--plus" src={plusImg} alt="+" onClick={itemAdd} />
+        <img className="card__buttons--minus" 
+             src={minusImg} 
+             alt="-" 
+             onClick={minus}
+        />
+        <input className="card__input"
+               type="text" 
+               readOnly="readonly" 
+               value={quantity}
+        />
+        <img className="card__buttons--plus"
+             src={plusImg} 
+             alt="+" 
+             onClick={plus}
+        />
       </div>
-      <button className='mainBtn'>Agregar producto</button>
+      <button className='addBtn' onClick={() => onAdd(quantity)}>Agregar producto</button>
     </div>
   )
 };

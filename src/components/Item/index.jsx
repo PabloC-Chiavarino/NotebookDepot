@@ -1,13 +1,12 @@
-
 import { Link } from "react-router-dom";
 import "./styles.css";
 
 const Item = ({ product }) => {
     
-    const { id, name, img, detail, price, stock } = product;
+    const { id, category, name, img, detail, price, stock } = product;
 
     return (
-        <Link to={`/product/detail/${id}`} style={{textDecoration: 'none'}}>
+        <Link to={`/categories/${category}/product/detail/${id}`} style={{textDecoration: 'none'}}>
             <div className="card">
                 <div className="card__more">
                     <p style={{margin:0, letterSpacing:'1px'}}>+ detalles</p>
