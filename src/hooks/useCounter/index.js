@@ -5,7 +5,8 @@ const useCounter = () => {
 
     const [ quantity, setQuantity ] = useState(1)
   
-    const plus = () => {
+    const plus = (avaiableStock) => {
+        if (quantity < avaiableStock)
         setQuantity(quantity + 1)
     }
 

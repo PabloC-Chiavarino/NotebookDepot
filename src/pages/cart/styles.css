@@ -22,13 +22,12 @@
 
 
 .cart__list--container {
-    font-size: 19px;
-    height: 50%;
-    width: 85%;
+    font-size: 1rem;
+    height: 60%;
+    width: 66%;
     position: absolute;
     top: 115px;
     overflow-y: auto;
-    font-family: 'anton';
     font-weight: lighter;
     letter-spacing: 0.5px;
 }
@@ -42,32 +41,29 @@
 
 .cart__total--container {
     position: absolute;
-    font-family: 'anton';
-    width: 70%;
-    bottom: 102px;
-    color: rgb(2, 64, 0);
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
+    font-family: orbitron;
+    top: 150px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    left: 27px;
+    gap: 60px;
 }
 
 .cart__options--container{
     color: transparent;
     align-items: end;
-    z-index: 1;
     display: flex;
-    gap: 1rem;
-    width: 37%;
-    position: relative;
+    position: absolute;
     font-size: 12px;
-    top: 165px;
+    bottom: 170px;
     font-family: 'orbitron';
+    left: 10px;
 }
 
 .cart__confirm--container{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
 }
 
 .cart__confirm--container:hover {
@@ -87,7 +83,9 @@
 
 .cart__erase--container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
 
 .cart__erase--container:hover {

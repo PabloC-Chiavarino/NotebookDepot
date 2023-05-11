@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { BlurModal, CartWidget, Slider } from "../../components";
+import { OpacityDiv, CartWidget, Slider } from "../../components";
 import "./styles.css";
 
 const NavBar = () => {
@@ -26,7 +26,7 @@ const NavBar = () => {
           <Slider show={shownState} onClose={handleState}/>
         </div>
       </nav>
-      <BlurModal show={shownState} handleOnClick={handleState} />
+      <OpacityDiv show={shownState} handleOnClick={handleState} />
     </>
   )
 }

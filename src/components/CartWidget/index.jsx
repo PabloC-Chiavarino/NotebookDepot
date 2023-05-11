@@ -5,7 +5,7 @@ import "./styles.css"
 
 const CartWidget = ({ handleOnClick }) => {
   
-  const { cartProducts } = useCartContext()
+  const { cartProducts, cartTotalProducts } = useCartContext()
   
   return (
     <>
@@ -14,7 +14,7 @@ const CartWidget = ({ handleOnClick }) => {
         className="cartContainer__count" 
         style={{ display: cartProducts.length ? 'block' : 'none'}} 
         >
-          {cartProducts.length}
+          {cartTotalProducts()}
         </div>
         <img className="cartContainer__img" src={cartImg} alt="" />
       </div>

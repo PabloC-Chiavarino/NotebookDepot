@@ -1,41 +1,59 @@
 
 import { createContext, useState } from "react";
-import { Form } from "../components";
 
 
 export const CartContext = createContext([])
 
-
 const CartProvider = ({ children }) => {
     
     const [ cartProducts, setCartProducts ] = useState([])
-    const [ totalProducts, setTotalProducts ] = useState(0)
     
     const cartAdd = (product) => {
-        setCartProducts(
-            [ ...cartProducts, product ]
+        
+        const sameId = (inCartProduct) => inCartProduct.id == product.id
+        const indexProduct = cartProducts.findIndex(sameId)
+
+        if (indexProduct === -1) {
+            setCartProducts(
+                [ ...cartProducts, product ]
             )
-        }
-    
-    const totalPrice = () => {
-        return cartProducts.reduce((total, product) => total =+ (product.price * product.quantity), 0)
+        }   else   {
+            cartProducts[indexProduct].quantity += product.quantity
+            setCartProducts([ ...cartProducts ])
+        }    
     }
 
-    const cartErase = () => setCartProducts([])
+    const cartTotalPrice = () => {
+        return cartProducts.reduce((totalPrice, product) => totalPrice += (product.price * product.quantity), 0)
+    }
 
-    const cartConfirm = () => {
-        return(
-            <Form />
-        )
+    const cartTotalProducts = () => {
+        return cartProducts.reduce((totalQuantity, product) => totalQuantity += product.quantity, 0)
+    }
+    
+    const cartEraseAll = () => setCartProducts([])
+
+    const cartErase = (product) => {
+        setCartProducts(cartProducts.filter(inCartProduct => inCartProduct.id != product.id))
+    }
+    
+    const cartProductDeduct = (product) => {
+        
+        const sameId = (inCartProduct) => inCartProduct.id == product.id
+        const indexProduct = cartProducts.findIndex(sameId)
+        
+        cartProducts[indexProduct].quantity -= 1
+        setCartProducts([ ...cartProducts ])
     }
 
     const values = {
-        cartProducts: cartProducts,
+        cartProducts,
         cartAdd,
         cartErase,
-        cartConfirm,
-        totalPrice,
-        totalProducts: totalProducts
+        cartEraseAll,
+        cartProductDeduct,
+        cartTotalProducts,
+        cartTotalPrice,
     }
 
     return (

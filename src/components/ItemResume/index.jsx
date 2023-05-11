@@ -1,23 +1,35 @@
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../../hooks'
 import { minusImg, binImg } from '../../assets/icons'
 import './styles.css'
 
 const ItemResume = ({product}) => {
+
+    const { id, img, category, name, quantity, price } = product
+
+    const { cartErase, cartProductDeduct } = useCartContext()
+
     return (
-        <Link to={`/categories/${product?.category}/product/detail/${product?.id}`} style={{textDecoration: 'none'}}>
-        <span className='itemResume__container' key={product?.id+1}>
-            <img className='itemResume__img' src={product?.img} alt='IMG_HERE'></img>
-            <span className='itemResume__subContainer'>
-                <h4>{product?.name}</h4>
-                <span className='itemResume__options--container'>
-                    <img className="itemResume__product--minus" src={minusImg} alt="minus" />
-                    <input className='itemResume__quantity' type='text' disabled value={product?.quantity} />
-                    <img className="itemResume__product--delete" src={binImg} alt="plus" /> 
+        <span className='itemResume__container' key={id}>
+            <img className='itemResume__img' src={img} alt='IMG_HERE'></img>
+            <Link to={`/categories/${category}/product/detail/${id}`} style={{textDecoration: 'none'}}>
+                <span className='itemResume__goTo'>
+                    <h6>Ir al producto</h6>
                 </span>
-                <h4>$ {product?.price}</h4>
+            </Link>
+            <span className='itemResume__subContainer'>
+                <h4>{name}</h4>
+                <span className='itemResume__options--container'>
+                    <h6 className='itemResume__quantity' >x{quantity}</h6>
+                    <img onClick={() => cartProductDeduct(product)}
+                         style={{display: quantity > 1 ? 'block' : 'none'}}
+                         className="itemResume__product--minus" 
+                         src={minusImg} alt="minus" />
+                    <img  onClick={() => cartErase(product)} className="itemResume__product--delete" src={binImg} alt="plus" /> 
+                </span>
+                <h4>$ {price * quantity }</h4>
             </span>
         </span>
-        </Link>
     )
 }
 

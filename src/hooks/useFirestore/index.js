@@ -2,11 +2,14 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, getDoc, doc, query, where } from 'firebase/firestore'
 
-const useFirestore = (requestType, params) => {
+
+const useFirestore = (requestType) => {
+    
     const { categoryId, productId } = useParams()
     const [ data, setData ] = useState([]);
-    const [ error, setError ] = useState('Listening');
+    const [ error, setError ] = useState('-');
     const [ loading, setLoading ] = useState(false);
+    
     console.log('Loading:',loading, 'Data Recieved:' ,data, 'Error:', error)
     
     useEffect( () => {       
@@ -44,7 +47,7 @@ const useFirestore = (requestType, params) => {
                             ...data.data() }
                             )
                         }
-                    
+
                 } catch(err) {
                         setError(err)
                 } finally {
@@ -65,8 +68,10 @@ const useFirestore = (requestType, params) => {
 export default useFirestore
 
     //Solo lo dejo temporal para que ud profe vea como lo hacia funcionar antes de firebase y pueda corregirme algo de ser necesario
-    //esto obvio que vuela todo del proyecto! me lo guarde como un hook para futuro
+    //esto obvio que vuela todo del proyecto! me lo guarde como un hook para futuro que reacciona 
+    //con los url y endpoints que estan en /constants/services/api
     
+
     // const useDelayFetch = (URL) => {
     //     const [ data, setData ] = useState([]);
     //     const [ error, setError ] = useState('Listening');

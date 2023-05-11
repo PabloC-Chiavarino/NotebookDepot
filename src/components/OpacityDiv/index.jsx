@@ -1,13 +1,13 @@
 import './styles.css'
 
-const BlurModal = ({ show, handleOnClick }) => {
+const OpacityDiv = ({ show, handleOnClick }) => {
     return (
         <div 
-        className='blurModal'
+        className='opacityDiv'
         style={{ display: show ? 'block' : 'none' }}
         onClick={handleOnClick}
         />
     )
 }
 
-export default BlurModal
+export default OpacityDiv

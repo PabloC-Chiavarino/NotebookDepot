@@ -22,10 +22,12 @@ const ItemCount = ({ avaiableStock, onAdd }) => {
         <img className="card__buttons--plus"
              src={plusImg} 
              alt="+" 
-             onClick={plus}
+             onClick={() => plus(avaiableStock)}
         />
       </div>
-      <button className='addBtn' onClick={() => onAdd(quantity)}>Agregar producto</button>
+      <button className='addBtn'
+              onClick={() => onAdd(quantity)}>Agregar producto
+      </button>
     </div>
   )
 };

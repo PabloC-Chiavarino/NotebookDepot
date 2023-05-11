@@ -5,7 +5,7 @@ import "./styles.css"
 
 const Slider = ({ show, onClose }) => {
   
-  const { cartProducts, totalPrice } = useCartContext()
+  const { cartProducts, cartTotalPrice } = useCartContext()
   
   return (
     <div
@@ -20,10 +20,10 @@ const Slider = ({ show, onClose }) => {
             <>
             <div className="slider__listContainer">
               {cartProducts.map(product => (
-                <SliderItem product={product} key={product?.id}/>
+                <SliderItem product={product} key={product.id}/>
               ))}
             </div>
-            <h4 className="slider__totalPrice">Total: $ {totalPrice()}</h4>
+            <h4 className="slider__cartTotalPrice">Total: $ {cartTotalPrice()}</h4>
             </>
           )
         }

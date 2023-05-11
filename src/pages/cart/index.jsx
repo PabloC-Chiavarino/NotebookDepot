@@ -5,7 +5,7 @@ import "./styles.css"
 
 const Cart = () => {
     
-    const { cartProducts, cartErase, cartConfirm, totalPrice } = useCartContext()
+    const { cartProducts, cartTotalProducts, cartEraseAll, cartConfirm, cartTotalPrice } = useCartContext()
     
     return (
             <div className='cart--container'>
@@ -18,29 +18,29 @@ const Cart = () => {
                         <>
                         <div className='cart__list--container'>
                             {cartProducts.map(product => (
-                            <ItemResume product={product} key={product.id+1} />     
+                            <ItemResume product={product} key={product.id} />     
                             ))}
                         </div>
                         <div className='cart__total--container'>
-                            <h2>Productos: {cartProducts.length}</h2>
-                            <h2>Total: $ {totalPrice()}</h2>
+                            <h2>Productos: {cartTotalProducts()}</h2>
+                            <h2>Total: $ {cartTotalPrice()}</h2>
                         </div>
                             <div className='cart__options--container'>
-                                <div className='cart__confirm--container'>    
-                                    <p>Confirmar compra</p>
-                                    <img onClick={cartConfirm} className='cart__confirm' src={confirmImg} alt='confirm cart' />
-                                </div>
                                 <div className='cart__erase--container'>
+                                    <img onClick={cartEraseAll} className='cart__erase' src={binBig} alt='erase cart' />
                                     <p>Eliminar compra</p>
-                                    <img onClick={cartErase} className='cart__erase' src={binBig} alt='erase cart' />
+                                </div>
+                                <div className='cart__confirm--container'>    
+                                    <img onClick={cartConfirm} className='cart__confirm' src={confirmImg} alt='confirm cart' />
+                                    <p>Confirmar compra</p>
                                 </div>
                             </div>
                         </>
                     )
                 }
                 <div className='navigate__options--container'>
-                    <MainBtn text='Home'/>
-                    <MainBtn type={'back'} text='Volver' />
+                    <MainBtn type='default' text='Ver productos' />
+                    <MainBtn type='back' text='Volver' />
                 </div>
             </div>
         )

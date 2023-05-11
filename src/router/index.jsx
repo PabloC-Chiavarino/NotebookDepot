@@ -13,7 +13,6 @@ const Router = () => {
             
             <Route path='/' element={<Navigate to={'/home'} />} />
             <Route path='*' element={<Navigate to={'/404'} />} />
-
         </Routes>
     )
 }
