@@ -9,7 +9,7 @@ const CartWidget = ({ handleOnClick }) => {
   
   return (
     <>
-      <div onClick={handleOnClick} className="cartContainer">
+      <div onClick={ handleOnClick} className="cartContainer">
         <div 
         className="cartContainer__count" 
         style={{ display: cartProducts.length ? 'block' : 'none'}} 

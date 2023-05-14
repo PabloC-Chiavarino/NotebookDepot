@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import { useCartContext } from '../../hooks';
-import { SectionTitle, MainBtn, ItemResume, Form } from '../../components';
+import { MainBtn, ItemResume, BuyFormModal, OpacityDiv } from '../../components';
 import { binBig, confirmImg } from '../../assets/icons'
 import "./styles.css"
 
 const Cart = () => {
     
+    const [ formShow, setFormShow ] = useState(false)
+    
+    const handleOnClick = () => setFormShow(!formShow)
+
     const { cartProducts, cartTotalProducts, cartEraseAll, cartConfirm, cartTotalPrice } = useCartContext()
     
     return (
@@ -21,6 +26,10 @@ const Cart = () => {
                             <ItemResume product={product} key={product.id} />     
                             ))}
                         </div>
+                        <OpacityDiv show={formShow} handleOnClick={handleOnClick} />
+                        <div className='cart__pocketHider'>
+                        <BuyFormModal show={formShow} handleOnClick={handleOnClick} />
+                        </div>
                         <div className='cart__total--container'>
                             <h2>Productos: {cartTotalProducts()}</h2>
                             <h2>Total: $ {cartTotalPrice()}</h2>
@@ -31,7 +40,7 @@ const Cart = () => {
                                     <p>Eliminar compra</p>
                                 </div>
                                 <div className='cart__confirm--container'>    
-                                    <img onClick={cartConfirm} className='cart__confirm' src={confirmImg} alt='confirm cart' />
+                                    <img onClick={handleOnClick} className='cart__confirm' src={confirmImg} alt='confirm cart' />
                                     <p>Confirmar compra</p>
                                 </div>
                             </div>

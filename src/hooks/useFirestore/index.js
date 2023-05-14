@@ -26,7 +26,6 @@ const useFirestore = (requestType) => {
                 try {
                     if (requestType === 'collection') {
                         requested = collection(dataBase, 'products')
-                        queryFilter;
                         !categoryId ? (
                             queryFilter = query(requested, where('outstanding', '==', true))
                             ) : (
@@ -57,7 +56,7 @@ const useFirestore = (requestType) => {
     
             request()
             
-        }, 1200)
+        }, 1000)
 
     }, [categoryId])
 

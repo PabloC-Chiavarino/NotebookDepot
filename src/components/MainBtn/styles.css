@@ -8,13 +8,14 @@
     border: none;
     transition: 0.3s;
     letter-spacing: 0.5px;
-    font-size: 13px;
+    font-size: 12px;
     position: relative;
     z-index: 1;
 }
 
 .mainBtn:hover {
     cursor: pointer;
-    background-color: rgb(201, 201, 201);
-    color: rgb(48, 48, 48);
+    background-color: rgb(139, 139, 139);
+    color: black;
+    font-weight: bold;
 }

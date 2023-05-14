@@ -4,7 +4,7 @@
     align-items: center;
     height: 30%;
     width: 95%;
-    font-family: 'orbitron', sans-serif;
+    font-family: 'anton', sans-serif;
     font-weight: unset;
 }
 
@@ -17,24 +17,25 @@
 .slider__item--name {
     position: relative;
     left: 1.4rem;
-    font-size: 15px;
+    font-size: 1rem;
     top: 30px;
     width: 210px;
+    font-weight: unset;
 }
 
 .slider__item--price {
     position: relative;
-    font-size: 14px;
+    font-size: 1rem;
     left: 5rem;
-    top: 12px;
-
+    top: 16px;
+    font-weight: unset;
 }
 
 .slider__item--quantity {
     color: #484848;
     position: relative;
     left: 3rem;
-    bottom: 37px;
+    bottom: 40px;
     font-size: 12px;
 }
 
@@ -43,17 +44,18 @@
     width: 80px;
     position: sticky;
     right: 27px;
-    margin-top: 50px;
+    margin-top: 75px;
+    height: 40px;
 }
 
 .slider__item--minus {
     width: 23px;
     height: 23px;
-    margin-left: 24px;
     cursor: pointer;
     border-radius: 50%;
     background-color: #c4cada91;
     transition: 0.25s;
+    margin-right: 2rem;
 }
 
 .slider__item--minus:hover {
@@ -64,6 +66,8 @@
 .slider__item--delete {
     margin-left: 0.4rem;
     transition: 0.2s;
+    position: absolute;
+    right: 0;
 }
 
 .slider__item--delete:hover {

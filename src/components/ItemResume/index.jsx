@@ -14,11 +14,11 @@ const ItemResume = ({product}) => {
             <img className='itemResume__img' src={img} alt='IMG_HERE'></img>
             <Link to={`/categories/${category}/product/detail/${id}`} style={{textDecoration: 'none'}}>
                 <span className='itemResume__goTo'>
-                    <h6>Ir al producto</h6>
+                    <h6 style={{fontWeight: "unset"}}>Ir al producto</h6>
                 </span>
             </Link>
             <span className='itemResume__subContainer'>
-                <h4>{name}</h4>
+                <h4 className='itemResume__name'>{name}</h4>
                 <span className='itemResume__options--container'>
                     <h6 className='itemResume__quantity' >x{quantity}</h6>
                     <img onClick={() => cartProductDeduct(product)}
@@ -27,7 +27,7 @@ const ItemResume = ({product}) => {
                          src={minusImg} alt="minus" />
                     <img  onClick={() => cartErase(product)} className="itemResume__product--delete" src={binImg} alt="plus" /> 
                 </span>
-                <h4>$ {price * quantity }</h4>
+                <h4 className='itemResume__price'>$ {price * quantity }</h4>
             </span>
         </span>
     )

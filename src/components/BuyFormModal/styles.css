@@ -1,0 +1,91 @@
+.buyformModal__container {
+  width: 90%;
+  border-radius: 2px;
+  background-color: #282828;
+  display: flex;
+  height: 20rem;
+  transition: 0.3s ease-out;
+  border-radius: 3px;
+  color: rgb(189, 189, 189);
+  position: relative;
+  top: 5px;
+  font-family: orbitron;
+  font-weight: unset;
+  letter-spacing: 1px;
+  overflow-y: hidden;
+  margin: auto;
+  z-index: 2;
+}
+
+.buyFormModal__sliderDown {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  transition: 0.2s;
+  height: 1rem;
+  width: 1rem;
+  z-index: 2;
+}
+
+.buyFormModal__sliderDown:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.buyForm__title {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 7px;
+  font-weight: unset;
+}
+
+.buyForm {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  position: relative;
+  top: 30px;
+}
+
+.buyForm__grid {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 50px;
+  padding: 1rem;
+}
+
+input {
+  padding: 6px;
+  width: 100%;
+}
+
+.buyForm__submit--container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 35px;
+}
+
+.buyForm__submit {
+  height: 45px;
+  width: 250px;
+  font-family: orbitron;
+  font-weight: unset;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: 0.2s;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.buyForm__submit:hover {
+  background-color: #757575;
+  color: black;
+  cursor: pointer;
+}
