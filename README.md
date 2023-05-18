@@ -21,10 +21,10 @@ It is connected to the firestore service provided by firebase and has a function
 
 ## Installation
 
-$ git clone https://github.com/PabloC-Chiavarino/NotebookDepot/
-$ cd ../path/to/the/file
-$ npm i vite
-$ npm run dev
+- $ git clone https://github.com/PabloC-Chiavarino/NotebookDepot/
+- $ cd ../path/to/the/file
+- $ npm i vite
+- $ npm run dev
 
 or
 
