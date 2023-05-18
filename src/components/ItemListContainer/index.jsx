@@ -1,22 +1,12 @@
 import { useParams } from 'react-router-dom'
 import { useFirestore } from '../../hooks'
-//import { URL_BASE, URL_ENDPOINTS } from '../../constants/services'
 import { Loader, ItemList, SectionTitle } from '../../components'
 import './styles.css'
 
 const ItemListContainer = () => {
     
     const { categoryId } = useParams()
-    //const { loading, data } = useDelayFetch(`${URL_BASE}${URL_ENDPOINTS.PRODUCTS}`)
-    const { loading, data } = useFirestore('collection', null)
-
-    // let requested = []
-
-    // categoryId ? (
-    //     requested = data.filter(prod => prod.category === categoryId)
-    // ) : (
-    //     requested = data.filter(prod => prod.outstanding === true)
-    // )
+    const { loading, data } = useFirestore('collection')
 
     return (
         <section className='products__container'>

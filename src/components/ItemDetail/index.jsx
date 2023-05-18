@@ -2,7 +2,7 @@ import { useCartContext } from '../../hooks'
 import { ItemCount } from '../../components'
 import './styles.css'
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ product, onAddPopUp }) => {
 
     const {img, name, detail, price, stock} = product
 
@@ -10,6 +10,7 @@ const ItemDetail = ({ product }) => {
 
     const handleOnAdd = (quantity) => {
         cartAdd({...product, quantity})
+        onAddPopUp()
     }
     
     return (

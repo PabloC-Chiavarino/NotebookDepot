@@ -1,23 +1,92 @@
 import { useState } from 'react';
-import { useCartContext } from '../../hooks';
+import { addDoc } from 'firebase/firestore'
+import Swal from 'sweetalert2';
+import { useFirestore, useCartContext } from '../../hooks';
 import { MainBtn, ItemResume, BuyFormModal, OpacityDiv } from '../../components';
 import { binBig, confirmImg } from '../../assets/icons'
 import "./styles.css"
 
 const Cart = () => {
     
-    const [ formShow, setFormShow ] = useState(false)
+    const [ formShow, setFormShow ] = useState(false)     
+    const [ formData, setFormData ] = useState({})
+    const [ orderSent, setOrderSent ] = useState(null)
+    const { cartProducts, cartTotalProducts, cartEraseAll, cartTotalPrice } = useCartContext()
+    const { data: orders } = useFirestore('orders')
     
     const handleOnClick = () => setFormShow(!formShow)
 
-    const { cartProducts, cartTotalProducts, cartEraseAll, cartConfirm, cartTotalPrice } = useCartContext()
-    
+    const handleFormData = (event) => {
+        setFormData(
+            {
+                ...formData,
+                [event.target.name] : event.target.value
+            }
+        )
+    }
+
+    const handleOrderSubmit = (event) => {
+        event.preventDefault()
+        
+        if(formData.email != formData.emailOk) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'El email de confirmacion debe ser igual al ingresado',
+                background: 'lightgrey',
+                color: '#292929',
+                font: 'orbitron'
+            })
+
+        }   else   {
+
+            const order = {
+                buyer: {name: formData.name,
+                        lastName: formData.lastName,
+                        contact:formData.phone,
+                        address: formData.address,
+                        email: formData.email
+                },
+                products: cartProducts.map(({id, name, quantity, price}) => (
+                    {id, name, quantity, price}
+                )),
+                total: cartTotalPrice()
+            }
+            addDoc(orders, order)
+            .then(response => setOrderSent(response.id))
+            .catch(err => console.log(err))
+            .finally( () =>
+                cartEraseAll()
+            )
+        }
+    }
+
     return (
             <div className='cart--container'>
                 <div className='cart__title--container'>
                     <h1 className='cart__title' >Carrito</h1>
                 </div>
-                {!cartProducts.length ? (
+                {orderSent != null ? (
+                    <>
+                        <h1 style={{fontSize: '1.5rem'}}>Muchas gracias por su compra !</h1>
+                        <div className='cart__orderInfo--container'>
+                            <div className='cart__orderInfo--ID'>
+                                <h3>Orden de compra:</h3>
+                                <div style={{color: 'red'}}>
+                                    {orderSent}
+                                </div>
+                            </div>
+                            <div className='cart__orderInfo--details'>
+                                <h3 style={{alignSelf: 'center', textDecoration: 'underline'}} >Datos de envio:</h3>
+                                <h5>Nombre: {formData.name}</h5>
+                                <h5>Apellido: {formData.lastName}</h5>
+                                <h5>Teléfono de contacto: {formData.phone}</h5>
+                                <h5>Dirección de envío: {formData.address}</h5>
+                            </div>
+                        </div>
+                    </>
+                    )   :   (
+                    !cartProducts.length ? (
                     <h1 className='cart__empty'>No ha agregado productos aún</h1>
                     )   :   (
                         <>
@@ -28,7 +97,11 @@ const Cart = () => {
                         </div>
                         <OpacityDiv show={formShow} handleOnClick={handleOnClick} />
                         <div className='cart__pocketHider'>
-                        <BuyFormModal show={formShow} handleOnClick={handleOnClick} />
+                        <BuyFormModal data={formData}
+                                      show={formShow}
+                                      handleOnClick={handleOnClick}
+                                      handleOnChange={handleFormData}
+                                      handleSubmit={handleOrderSubmit} />
                         </div>
                         <div className='cart__total--container'>
                             <h2>Productos: {cartTotalProducts()}</h2>
@@ -46,7 +119,8 @@ const Cart = () => {
                             </div>
                         </>
                     )
-                }
+                )
+            }
                 <div className='navigate__options--container'>
                     <MainBtn type='default' text='Ver productos' />
                     <MainBtn type='back' text='Volver' />

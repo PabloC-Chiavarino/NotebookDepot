@@ -1,6 +1,5 @@
 .buyformModal__container {
   width: 90%;
-  border-radius: 2px;
   background-color: #282828;
   display: flex;
   height: 20rem;
@@ -47,7 +46,7 @@
   width: 100%;
   margin: 20px;
   position: relative;
-  top: 30px;
+  top: 1rem;
 }
 
 .buyForm__grid {
@@ -60,6 +59,8 @@
 input {
   padding: 6px;
   width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .buyForm__submit--container {
@@ -67,7 +68,7 @@ input {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 35px;
+  bottom: 1rem;
 }
 
 .buyForm__submit {

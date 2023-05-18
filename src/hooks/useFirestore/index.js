@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, getDoc, doc, query, where } from 'firebase/firestore'
 
 
-const useFirestore = (requestType) => {
+const useFirestore = ( requestType ) => {
     
     const { categoryId, productId } = useParams()
     const [ data, setData ] = useState([]);
@@ -24,6 +24,10 @@ const useFirestore = (requestType) => {
             
             let request = async () => {
                 try {
+                    if (requestType === 'orders') {
+                        requested = collection(dataBase, 'orders')
+                        setData(requested)
+                    }
                     if (requestType === 'collection') {
                         requested = collection(dataBase, 'products')
                         !categoryId ? (

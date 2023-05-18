@@ -24,10 +24,12 @@
     letter-spacing: 1px;
     top: 130px;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .title__container h1 {
     display: flex;
+    font-weight: lighter;
 }
 
 .title__underscore{
