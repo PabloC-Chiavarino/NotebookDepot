@@ -1,6 +1,7 @@
 export {default as NavBar} from './NavBar'
 export {default as CartWidget} from './CartWidget'
 export {default as Slider} from './Slider'
+export {default as CartList} from './CartList'
 export {default as ItemListContainer} from './ItemListContainer'
 export {default as ItemList} from './ItemList'
 export {default as Item} from './Item'

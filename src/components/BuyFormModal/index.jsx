@@ -14,7 +14,7 @@ const BuyFormModal = ({data, show, handleOnClick, handleOnChange, handleSubmit})
             <form onSubmit={handleSubmit}
                   className='buyForm'
                   action='submit' 
-                  name="customer's info" 
+                  name="customersInfo" 
                   method="post"
                 >
                 <div className='buyForm__grid'>

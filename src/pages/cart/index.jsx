@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { addDoc } from 'firebase/firestore'
-import Swal from 'sweetalert2';
+import { mailConfirmErr } from '../../constants/utils';
 import { useFirestore, useCartContext } from '../../hooks';
-import { MainBtn, ItemResume, BuyFormModal, OpacityDiv } from '../../components';
+import { MainBtn, BuyFormModal, OpacityDiv, CartList } from '../../components';
 import { binBig, confirmImg } from '../../assets/icons'
 import "./styles.css"
 
@@ -29,14 +29,7 @@ const Cart = () => {
         event.preventDefault()
         
         if(formData.email != formData.emailOk) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'Oops...',
-                text: 'El email de confirmacion debe ser igual al ingresado',
-                background: 'lightgrey',
-                color: '#292929',
-                font: 'orbitron'
-            })
+            mailConfirmErr()
 
         }   else   {
 
@@ -90,24 +83,21 @@ const Cart = () => {
                     <h1 className='cart__empty'>No ha agregado productos aún</h1>
                     )   :   (
                         <>
-                        <div className='cart__list--container'>
-                            {cartProducts.map(product => (
-                            <ItemResume product={product} key={product.id} />     
-                            ))}
-                        </div>
-                        <OpacityDiv show={formShow} handleOnClick={handleOnClick} />
-                        <div className='cart__pocketHider'>
-                        <BuyFormModal data={formData}
-                                      show={formShow}
-                                      handleOnClick={handleOnClick}
-                                      handleOnChange={handleFormData}
-                                      handleSubmit={handleOrderSubmit} />
-                        </div>
-                        <div className='cart__total--container'>
-                            <h2>Productos: {cartTotalProducts()}</h2>
-                            <h2>Total: $ {cartTotalPrice()}</h2>
-                        </div>
-                            <div className='cart__options--container'>
+                            <div className='cart__list--container'>
+                                <CartList />
+                            </div>
+                            <OpacityDiv show={formShow} handleOnClick={handleOnClick} />
+                            <div className='cart__pocketHider'>
+                            <BuyFormModal data={formData}
+                                        show={formShow}
+                                        handleOnClick={handleOnClick}
+                                        handleOnChange={handleFormData}
+                                        handleSubmit={handleOrderSubmit} />
+                            </div>
+                            <div className='cart__total--container'>
+                                <h2>Productos: {cartTotalProducts()}</h2>
+                                <h2>Total: $ {cartTotalPrice()}</h2>
+                            </div>
                                 <div className='cart__erase--container'>
                                     <img onClick={cartEraseAll} className='cart__erase' src={binBig} alt='erase cart' />
                                     <p>Eliminar compra</p>
@@ -116,7 +106,6 @@ const Cart = () => {
                                     <img onClick={handleOnClick} className='cart__confirm' src={confirmImg} alt='confirm cart' />
                                     <p>Confirmar compra</p>
                                 </div>
-                            </div>
                         </>
                     )
                 )

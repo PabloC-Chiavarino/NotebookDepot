@@ -1,9 +1,9 @@
 .itemResume__container {
     display: flex;
-    justify-content: center;
-    width: 95%;
+    justify-content: space-between;
+    width: 70%;
     border-bottom: 1px solid gainsboro;
-    height: 100px;
+    height: 105px;
     margin: auto;
     position: relative;
     top: 15px;
@@ -21,9 +21,9 @@
 
 .itemResume__goTo {
     position: absolute;
-    left: 7.75rem;
+    left: 150px;
     right: 0;
-    top: 2.7rem;
+    top: 1rem;
     width: fit-content;
     text-decoration: none;
     transition: 0.2s;
