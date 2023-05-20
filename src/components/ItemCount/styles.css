@@ -6,7 +6,7 @@
     bottom: 96px;
     right: 60px;
     height: fit-content;
-    width: 220px;
+    width: 240px;
 }
 
 .card__buttons--subContainer {
@@ -30,16 +30,18 @@
 
 .card__input {
     width: 20px;
-    height: 30px;
+    height: 16px;
     text-align: center;
     border: 1px solid darkgrey;
-    border-radius: 3px;
+    border-radius: 2px;
     opacity: 0.8;
     background: transparent;
     outline: none;
     font-family: 'anton', sans-serif;
     font-size: 1rem;
     position: absolute;
+    top: -4px;
+
 }
 
 .addBtn {
@@ -56,11 +58,11 @@
     transition: 0.3s;
     letter-spacing: 0.5px;
     font-size: 13px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .addBtn:hover {
     cursor: pointer;
     background-color: rgb(201, 201, 201);
-    color: rgb(87, 87, 87);
+    color:black;
 }

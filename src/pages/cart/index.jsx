@@ -83,29 +83,29 @@ const Cart = () => {
                     <h1 className='cart__empty'>No ha agregado productos aún</h1>
                     )   :   (
                         <>
+                            <div className='cart__erase--container'>
+                                <img onClick={cartEraseAll} className='cart__erase' src={binBig} alt='erase cart' />
+                                <p>Eliminar compra</p>
+                            </div>
                             <div className='cart__list--container'>
                                 <CartList />
                             </div>
                             <OpacityDiv show={formShow} handleOnClick={handleOnClick} />
-                            <div className='cart__pocketHider'>
                             <BuyFormModal data={formData}
                                         show={formShow}
                                         handleOnClick={handleOnClick}
                                         handleOnChange={handleFormData}
                                         handleSubmit={handleOrderSubmit} />
-                            </div>
                             <div className='cart__total--container'>
-                                <h2>Productos: {cartTotalProducts()}</h2>
-                                <h2>Total: $ {cartTotalPrice()}</h2>
-                            </div>
-                                <div className='cart__erase--container'>
-                                    <img onClick={cartEraseAll} className='cart__erase' src={binBig} alt='erase cart' />
-                                    <p>Eliminar compra</p>
-                                </div>
+                                <h3>Cant. productos: {cartTotalProducts()}</h3>
+                                <h3>Total carrito: {cartTotalPrice()}</h3>
+                                <h3>Envío: {cartTotalProducts() >= 2 ? 'Gratis !' : '$ 2500'}</h3>
+                                <h2>Total: $ {cartTotalPrice() + 2500 }</h2>
                                 <div className='cart__confirm--container'>    
-                                    <img onClick={handleOnClick} className='cart__confirm' src={confirmImg} alt='confirm cart' />
                                     <p>Confirmar compra</p>
+                                    <img onClick={handleOnClick} className='cart__confirm' src={confirmImg} alt='confirm cart' />
                                 </div>
+                            </div>
                         </>
                     )
                 )

@@ -12,15 +12,24 @@
 }
 
 .cart__title--container {
-    width: 100%;
+    width: 30%;
     position: absolute;
-    top: 75px;
+    top: 66px;
+    display: flex;
+    justify-content: end;
+    border-bottom: 2px solid black;
+    right: 0;
+    z-index: 2;
 }
 
 .cart__title {
     font-size: 30px;
     font-family: 'orbitron';
-    padding-left: 25px;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: 10px;
+    right: 2rem;
 }
 
 .cart__orderInfo--container {
@@ -50,21 +59,18 @@
 
 .cart__list--container {
     font-size: 1rem;
-    height: 50%;
+    height: 65%;
     width: 65%;
     position: absolute;
-    top: 160px;
+    left: 30px;
+    bottom: 90px;
     overflow-y: auto;
     font-weight: lighter;
     letter-spacing: 0.5px;
     z-index: 1;
-}
-
-.cart__pocketHider {
-    width: 65%;
-    position: absolute;
-    bottom: 100px;
-    overflow: hidden;
+    overflow-x: hidden;
+    scrollbar-color: rgb(145, 145, 145) #cccccc;
+    scrollbar-width: thin;
 }
 
 .cart__empty {
@@ -77,11 +83,15 @@
 .cart__total--container {
     position: absolute;
     font-family: orbitron;
-    top: 150px;
+    top: 180px;
     color: rgb(0, 0, 0);
     font-size: 12px;
-    left: 27px;
-    gap: 60px;
+    right: 2rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
 }
 
 .cart__confirm--container{
@@ -89,10 +99,10 @@
     align-items: center;
     font-size: 12px;
     position: absolute;
-    left: 22px;
+    bottom: 1rem;
     z-index: 1;
     color: whitesmoke;
-    gap: 10px;
+    gap: 20px;
 }
 
 .cart__confirm--container:hover {
@@ -112,13 +122,15 @@
 
 .cart__erase--container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     font-size: 12px;
     position: absolute;
     z-index: 1;
     color: whitesmoke;
-    top: 85px;
+    top: 95px;
+    gap: 1rem;
+    width: 50%;
+    right: 0;
 }
 
 .cart__erase--container:hover {
@@ -139,11 +151,10 @@
 .navigate__options--container {
     display: flex;
     position: absolute;
-    bottom: 25px;
+    bottom: 30px;
     letter-spacing: 1px;
-    width: 100%;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .swal2-container {

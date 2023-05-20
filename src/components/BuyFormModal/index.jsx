@@ -3,7 +3,7 @@ import './styles.css'
 const BuyFormModal = ({data, show, handleOnClick, handleOnChange, handleSubmit}) => {
     return (
         <div className='buyformModal__container'
-             style={{transform: show ? 'translateY(0)' : 'translateY(90%)'}}
+             style={{transform: show ? 'translateY(0)' : 'translateY(100%)'}}
              >
             <div onClick={handleOnClick} 
                  className='buyFormModal__sliderDown'
@@ -36,7 +36,7 @@ const BuyFormModal = ({data, show, handleOnClick, handleOnChange, handleSubmit})
                                required
                             />
                         <label>Teléfono de contacto</label>
-                        <input type='number'
+                        <input type='text'
                                name="phone"
                                placeholder="01144444444"
                                onChange={handleOnChange}
