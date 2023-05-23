@@ -56,13 +56,10 @@ const Cart = () => {
 
     return (
             <div className='cart--container'>
-                <div className='cart__title--container'>
-                    <h1 className='cart__title' >Carrito</h1>
-                </div>
                 {orderSent != null ? (
                     <>
-                        <h1 style={{fontSize: '1.5rem'}}>Muchas gracias por su compra !</h1>
                         <div className='cart__orderInfo--container'>
+                        <h1 style={{fontSize: '1.4rem', color: 'white'}}>Muchas gracias por su compra !</h1>
                             <div className='cart__orderInfo--ID'>
                                 <h3>Orden de compra:</h3>
                                 <div style={{color: 'red'}}>
@@ -70,19 +67,22 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div className='cart__orderInfo--details'>
-                                <h3 style={{alignSelf: 'center', textDecoration: 'underline'}} >Datos de envio:</h3>
-                                <h5>Nombre: {formData.name}</h5>
-                                <h5>Apellido: {formData.lastName}</h5>
-                                <h5>Teléfono de contacto: {formData.phone}</h5>
-                                <h5>Dirección de envío: {formData.address}</h5>
+                                <h3>Datos de envio:</h3>
+                                <h5>{formData.name}</h5>
+                                <h5>{formData.lastName}</h5>
+                                <h5>{formData.phone}</h5>
+                                <h5>{formData.address}</h5>
                             </div>
-                        </div>
+                        </div>  
                     </>
                     )   :   (
                     !cartProducts.length ? (
                     <h1 className='cart__empty'>No ha agregado productos aún</h1>
                     )   :   (
                         <>
+                            <div className='cart__title--container'>
+                                <h1 className='cart__title' >Carrito</h1>
+                            </div>
                             <div className='cart__erase--container'>
                                 <img onClick={cartEraseAll} className='cart__erase' src={binBig} alt='erase cart' />
                                 <p>Eliminar compra</p>

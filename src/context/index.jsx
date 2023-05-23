@@ -46,8 +46,6 @@ const CartProvider = ({ children }) => {
         setCartProducts([ ...cartProducts ])
     }
 
-  
-
     const values = {
         cartProducts,
         cartAdd,

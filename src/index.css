@@ -4,5 +4,5 @@
 body {
   margin: auto;
   background-color: whitesmoke;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
