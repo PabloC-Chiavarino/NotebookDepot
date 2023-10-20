@@ -2,10 +2,10 @@
     display: flex;
     background-color: #d0d0d0;
     align-items: center;
-    height: 30%;
+    height: 34%;
     width: 95%;
-    font-family: 'anton', sans-serif;
-    font-weight: unset;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .slider__item--img {
@@ -17,26 +17,25 @@
 .slider__item--name {
     position: relative;
     left: 1.4rem;
-    font-size: 1rem;
-    top: 30px;
-    width: 210px;
-    font-weight: unset;
+    font-size: 15px;
+    top: 35px;
+    width: 190px;
 }
 
 .slider__item--price {
     position: relative;
-    font-size: 1rem;
+    font-size: 15px;
     left: 5rem;
-    top: 16px;
-    font-weight: unset;
+    top: 18px;
+    font-weight: lighter;
 }
 
 .slider__item--quantity {
     color: #484848;
     position: relative;
     left: 3rem;
-    bottom: 40px;
-    font-size: 12px;
+    bottom: 35px;
+    font-size: 13px;
 }
 
 .slider__item--options {

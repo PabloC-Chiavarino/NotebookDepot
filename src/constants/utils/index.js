@@ -1,7 +1,6 @@
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
-
 export const throwAddPopUp = () => {
     toast.success('Producto agregado al carrito', {
         position: "top-right",

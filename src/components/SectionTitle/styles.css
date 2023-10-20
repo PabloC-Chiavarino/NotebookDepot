@@ -12,19 +12,18 @@
 
 .title__container {
     width: 420px;
-    height: 50px;
+    height: 45px;
     background-color: #e3e3e3;
     position: absolute;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'wix madefor display';
     font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.05rem;
     letter-spacing: 1px;
-    top: 130px;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .title__container h1 {

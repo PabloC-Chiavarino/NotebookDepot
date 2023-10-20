@@ -23,7 +23,7 @@ const Slider = ({ show, onClose }) => {
               <SliderItem product={product} key={product.id} />
             ))}
           </div>
-          <h4 className="slider__cartTotalPrice">Total: $ {cartTotalPrice()}</h4>
+          <h4 style={{fontSize: '1.2rem'}}>Total: $ {cartTotalPrice()}</h4>
         </>
       )
       }

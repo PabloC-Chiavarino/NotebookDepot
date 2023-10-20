@@ -1,20 +1,21 @@
 .navBar {
     min-width: 100vh;
-    height: 65px;
+    height: 4.4rem;
     background-color: rgba(220,220,220);
     display: flex;
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 4;
     box-shadow: 0px 1px 10px black;
     user-select: none;
 }
 
 .logo__container {
-    font-family: 'Orbitron', sans-serif;
     display: flex;
     text-shadow: 3px 3px 4px black;
     transition: 0.2s;
+    font-weight: lighter;
+    font-size: 25px;
 }
 
 .logo__container:hover {
@@ -24,21 +25,22 @@
 
 .logo__title {
     padding-left: 1.5rem;
-    font-size: 1.4rem;
     height: fit-content;
-    margin-top: 10px;
+    margin-top: 3px;
     color: #ffffff;
     letter-spacing: 3px;
+    font-size: 2rem;
 }
 
 .logo__subtitle {
-    margin-top: 2.1rem;
+    margin-top: 34px;
     position: absolute;
-    margin-left: 6rem;
-    font-size: 1.1rem;
-    color: #ffffff;
+    margin-left: 8.3rem;
+    font-size: 20px;
+    color: #292929;
     letter-spacing: 4px;
 }
+
 .menu__container {
     display: flex;
     width: 40rem;
@@ -54,7 +56,7 @@
     list-style: none;
     justify-content: flex-end;
     padding: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .categories__list a.active {
@@ -62,11 +64,10 @@
 }
 
 .categories {
-    font-family: 'Orbitron', sans-serif;
     transition: 0.06s;
-    font-size: 15px;
     color: antiquewhite;
     text-decoration: none;
+    height: 3px;
 }
 
 .categories:hover {

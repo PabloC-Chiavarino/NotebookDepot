@@ -1,14 +1,14 @@
-import { NavBar } from './components'
+import { NavBar, ContactForm, Footer} from './components'
 import Router from './router'
 
 function App () {
 
   return (
     <>
-      <header>
         <NavBar />
-      </header>
       <Router />
+        <ContactForm/>
+        <Footer />
     </>
   ) 
 }

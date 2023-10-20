@@ -1,8 +1,11 @@
-import { ItemListContainer } from "../../components";
+import { ItemListContainer, Carousel } from "../../components";
 
 const defaultPage = () => {
     return (
-        <ItemListContainer />
+        <>
+            <Carousel />
+            <ItemListContainer />
+        </>
     )
 }
 

@@ -18,16 +18,16 @@
     font-family: 'anton', sans-serif;
     font-size: 12px;
     z-index: 1;
-    background-color: #f76a68;
+    background-color: #ff322f;
     display: flex;
     align-items: center;
     position: relative;
-    bottom: 12px;
+    bottom: 13px;
     user-select: none;
     border-radius: 50%;
     width: 1.1rem;
     height: 1.1rem;
-    left: 12px;
+    left: 13px;
     text-align: center;
     justify-content: center;
 }

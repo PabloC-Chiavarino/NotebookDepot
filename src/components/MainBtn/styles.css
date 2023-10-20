@@ -2,20 +2,20 @@
     height: 45px;
     text-decoration: none;
     width: 240px;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgb(40, 40, 40);
-    color: rgb(212, 212, 212);
-    border: none;
+    font-family: 'wix madefor display', sans-serif;
+    color: #292929;
+    border: 1px solid;
     transition: 0.3s;
-    letter-spacing: 0.5px;
-    font-size: 12px;
+    letter-spacing: 1px;
+    font-size: 14px;
     position: relative;
     z-index: 1;
+    background-color: transparent;    
 }
 
 .mainBtn:hover {
     cursor: pointer;
-    background-color: rgb(201, 201, 201);
-    color: black;
-    font-weight: bold;
+    background-color: rgb(122, 122, 122);
+    color: white;
+    border-color: transparent;
 }

@@ -2,12 +2,11 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     align-items: center;
     user-select: none;
     letter-spacing: 1px;
-    font-family: 'orbitron';
     background-color: whitesmoke;
 }
 
@@ -24,7 +23,6 @@
 
 .cart__title {
     font-size: 30px;
-    font-family: 'orbitron';
     justify-content: center;
     display: flex;
     position: relative;
@@ -33,7 +31,6 @@
 }
 
 .cart__orderInfo--container {
-    font-family: orbitron;
     width: 56%;
     background-color: #292929;
     color: rgb(207, 207, 207);
@@ -64,11 +61,11 @@
 
 .cart__list--container {
     font-size: 1rem;
-    height: 65%;
+    height: 63%;
     width: 65%;
     position: absolute;
     left: 30px;
-    bottom: 90px;
+    bottom: 85px;
     overflow-y: auto;
     font-weight: lighter;
     letter-spacing: 0.5px;
@@ -80,14 +77,13 @@
 
 .cart__empty {
     position: relative;
-    font-family: 'orbitron', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: lighter;
 }
 
 .cart__total--container {
     position: absolute;
-    font-family: orbitron;
     top: 180px;
     color: rgb(0, 0, 0);
     font-size: 12px;
@@ -104,7 +100,7 @@
     align-items: center;
     font-size: 12px;
     position: absolute;
-    bottom: 1rem;
+    bottom: 0;
     z-index: 1;
     color: whitesmoke;
     gap: 20px;
@@ -163,7 +159,7 @@
 }
 
 .swal2-container {
-    font-family: 'orbitron';
+    font-family: 'wix madefor display', sans-serif;
     letter-spacing: 1px;
 }
 

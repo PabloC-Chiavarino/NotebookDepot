@@ -6,9 +6,9 @@
     flex-direction: column;
     position: fixed;
     right: 0%;
-    z-index: 4;
+    z-index: 6;
     background-color: ghostwhite;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'wix madefor display', sans-serif;
     background-color: #dcdcdc;
     transition: 0.2s ease-in-out;
     user-select: none;
@@ -33,40 +33,27 @@
     padding-bottom: 1rem;
     color: #484848;
     width: 95%;
+    font-size: 26px;
 }
 
 .slider__empty {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'orbitron';
-    letter-spacing: 1px;
     font-weight: unset;
     position: relative;
-    top: 5rem;
-    font-size: 20px;
+    top: 7rem;
+    font-size: 21px;
 }
 
 .slider__listContainer {
-    height: 55%;
+    height: 50%;
     overflow-y: auto;
     overflow-x: hidden;
     color: #2d2d2d;
     display: flex;
     flex-direction: column;
     gap: 14px;
-}
-
-.slider__totalPrice {
-    display: flex;
-    color: #272727;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    font-family: orbitron;
-    font-size: 1rem;
-    position: relative;
-    left: 25px;
 }
 
 .slider__checkoutBtn--container {
@@ -87,17 +74,17 @@
     text-decoration: none;
     border: none;
     width: 80%;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgb(40, 40, 40);
-    color: rgb(212, 212, 212);
+    color: #292929;
     transition: 0.3s;
     letter-spacing: 0.7px;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid black;
 }
 
 .slider__checkoutBtn:hover {
     cursor: pointer;
-    background-color: rgb(139, 139, 139);
-    color: black;
-    font-weight: bold;
+    background-color: rgb(122, 122, 122);
+    color: white;
+    border-color: transparent;
 }

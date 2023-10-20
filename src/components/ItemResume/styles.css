@@ -1,12 +1,11 @@
 .itemResume__container {
     display: flex;
     width: 85%;
-    height: 120px;
+    height: 110px;
     border-bottom: 1px solid gainsboro;
     margin: auto;
     position: relative;
     top: 15px;
-    font-family: 'orbitron', sans-serif;
     font-size: 15px;
     left: 16px;
 }
@@ -26,6 +25,7 @@
     transition: 0.2s;
     color: rgb(170, 170, 170);
     font-weight: unset;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;

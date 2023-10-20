@@ -31,7 +31,6 @@
     height: 100px;
     position: absolute;
     z-index: 2;
-    top: 300px;
     justify-content: center;
 }
 
@@ -55,8 +54,8 @@
     position: absolute;
     height: fit-content;
     top: 3rem;
-    font-family: sans-serif;
-    letter-spacing: 2px;
+    font-family: 'wix madefor display', sans-serif;
+    letter-spacing: 1px;
     font-weight: unset;
     font-size: 1.4rem;
 }

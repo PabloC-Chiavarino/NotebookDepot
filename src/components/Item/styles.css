@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 6px;
+    text-align: center;
+    border-radius: 3px;
     background-color: white;
     margin: 0.5rem;
     padding: 1rem;
-    width: 260px;
-    min-height: 500px;
-    font-family: 'Anton', sans-serif;
+    height: 475px;
+    width: 270px;
     box-shadow: 1px 1px 3px rgb(46, 46, 46);
     margin-top: 50px;
     transition: 0.25s;
@@ -36,26 +36,30 @@
 
 .card__img {
     width: 205px;
-    margin-bottom: -25px;
+    margin-bottom: -30px;
     margin-top: -20px;
 }
 
 .card__name {
     font-size: 1.2rem;
-    margin-bottom: -10px;
+    margin-top: 1rem;
+    margin-bottom: 0px;
     color: rgb(50, 50, 50);
-    font-weight: unset;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 265px;
 }
 
 .card__detail--container {
     display: flex;
     flex-direction: column;
-    max-height: 130px;
+    width: 95%;
+    height: 175px;
 }
 
 .card__detail {
     font-size: 14px;
-    padding: 5px;
     color: rgb(40, 40, 40);
     letter-spacing: 0.5px;
 }
@@ -66,7 +70,6 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 50px;
 }
 
 .card__price {
@@ -80,7 +83,7 @@
     display: flex;
     width: 100%;
     position: relative;
-    top: 60px;
+    top: 10px;
 }
 
 .card__stock {

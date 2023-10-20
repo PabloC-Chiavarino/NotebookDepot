@@ -3,7 +3,7 @@
     display: flex;
     background-color: white;
     width: 95%;
-    font-family: 'anton', sans-serif;
+    font-family: 'wix madefor display', sans-serif;
     font-size: 15px;
     box-shadow: 1px 1px 3px rgb(46, 46, 46);
     margin-top: 50px;
@@ -12,6 +12,7 @@
     height: 30rem;
     top: 45px;
     background-color: whitesmoke;
+    border-radius: 4px;
   }
 
 .detail__img {
@@ -29,20 +30,24 @@
   top: 100px;
 }
 
+.detail__description {
+  line-height: 23px;
+}
+
 .detail__name {
   font-size: 2.2rem;
   color: rgb(50, 50, 50);
   font-weight: unset;
   position: absolute;
   top: 0;
-  right: 25rem;
+  right: 18rem;
   letter-spacing: 1px;
 }
 
 .detail__price--container {
   display: flex;
   position: relative;
-  top: 190px;
+  top: 205px;
   left: 10.75rem;
   width: fit-content;
   justify-content: center;
@@ -67,9 +72,9 @@
 
 .detail__stock--container {
   position: relative;
-  top: 270px;
+  top: 280px;
   height: fit-content;
-  left: 3.2rem;
+  left: 5px;
 }
 
 .detail__stock {
