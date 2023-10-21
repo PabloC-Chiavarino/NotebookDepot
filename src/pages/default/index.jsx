@@ -1,10 +1,13 @@
 import { ItemListContainer, Carousel } from "../../components";
+import './styles.css'
 
 const defaultPage = () => {
     return (
         <>
             <Carousel />
-            <ItemListContainer />
+            <section className="productsSection">
+                <ItemListContainer />
+            </section>
         </>
     )
 }

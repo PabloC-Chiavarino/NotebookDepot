@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <h5 className="footer__copyright">Desarrollado por Pablo César Chiavarino</h5>
+          <h5 className="footer__copyright">Developed by Pablo César Chiavarino</h5>
         </div>
   )
 }

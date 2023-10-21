@@ -1,10 +1,9 @@
 .products__container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 40px;
-    gap: 3rem;
+    gap: 2.5rem;
     user-select: none;
-    position: relative;
-    margin-bottom: 22rem;
+    height: 650px;
+    width: 80%;
+    margin: auto;
+    overflow-x: auto;
 }

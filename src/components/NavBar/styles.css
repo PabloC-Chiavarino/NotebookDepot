@@ -50,6 +50,13 @@
     height: inherit;
 }
 
+.categories {
+    transition: 0.06s;
+    color: antiquewhite;
+    text-decoration: none;
+    height: 1px;
+}
+
 .categories__list {
     display: flex;
     gap: 45px;
@@ -61,13 +68,6 @@
 
 .categories__list a.active {
     box-shadow: 0px -30px 0.5px 1px #625ec4
-}
-
-.categories {
-    transition: 0.06s;
-    color: antiquewhite;
-    text-decoration: none;
-    height: 3px;
 }
 
 .categories:hover {

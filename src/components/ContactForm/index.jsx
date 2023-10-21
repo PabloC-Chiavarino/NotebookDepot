@@ -22,7 +22,7 @@ const ContactForm = () => {
       <section>
         <form className='contactForm__container' ref={formRef} onSubmit={sendEmail}>  
           <h2 className='contactForm__title'>Necesitás ascesoramiento?</h2>
-          <h3 className='contactForm__title'>Dejanos tu consulta y te respondemos a la brevedad !</h3>
+          <h3 className='contactForm__title'>Dejanos tu consulta y te responderemos a la brevedad !</h3>
           <label className='contactForm__label'>Nombre</label>
           <input className='contactForm__input' type="text" name="user_name" required/>
 

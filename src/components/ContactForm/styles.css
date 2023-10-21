@@ -5,7 +5,10 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 10rem;
+  top: 425px;
+  z-index: 2;
+  background-color: whitesmoke;
+  padding-top: 1.5rem;
 }
 
 .contactForm__label {
@@ -23,7 +26,7 @@
 .contactForm__msg {
   resize: none;
   width: 50%;
-  height: 7rem;
+  height: 10rem;
   padding: 6px;
   margin: auto;
 }
