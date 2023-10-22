@@ -1,0 +1,15 @@
+.backBtn {
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    margin-left: 3.5rem;
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+.backBtn:hover {
+    background-color: rgb(230, 230, 230);
+    box-shadow: 1px 1px 1px black
+}

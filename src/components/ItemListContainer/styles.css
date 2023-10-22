@@ -3,7 +3,8 @@
     gap: 2.5rem;
     user-select: none;
     height: 650px;
-    width: 80%;
+    width: 68rem;
     margin: auto;
-    overflow-x: auto;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
 }

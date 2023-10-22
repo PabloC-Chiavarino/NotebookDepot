@@ -1,0 +1,15 @@
+.fowardBtn {
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 3.5rem;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.fowardBtn:hover {
+    background-color: rgb(230, 230, 230);
+    box-shadow: 1px 1px 1px black
+}
