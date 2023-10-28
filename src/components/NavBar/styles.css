@@ -43,10 +43,10 @@
 
 .menu__container {
     display: flex;
-    width: 40rem;
+    width: 50rem;
     position: absolute;
     right: 0;
-    background-color: #292929;
+    background-color: #353535;
     height: inherit;
 }
 

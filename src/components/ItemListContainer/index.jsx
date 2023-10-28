@@ -1,25 +1,26 @@
-import { useRef } from 'react'
 import { useParams } from 'react-router-dom'
+import { useRef } from 'react'
 import { useFirestore } from '../../hooks'
 import { Loader, ItemList, SectionTitle, BackBtn, FowardBtn } from '../../components'
 import './styles.css'
 
 const ItemListContainer = () => {
-    const scrollContainer = useRef()
-
-    const scrollBack = () => {
-        scrollContainer.current.scrollLeft = -366
-    }
-
-    const scrollFoward = () => {
-        scrollContainer.current.scrollLeft = 400
-    }
-
+    const ref = useRef()
     const { categoryId } = useParams()
     const { loading, data } = useFirestore('collection')
+   
+    const scrollBack = () => {
+        ref.current.scrollLeft = -366
+    }
 
+    const scrollForward = () => {
+        ref.current.scrollLeft = 400
+    }
+
+    const maxItemsShow = data.length > 3
+     
     return (
-        <section className='products__container' ref={scrollContainer}>
+        <section className='products__container' ref={ref} >
             {loading ? (
                 categoryId ? (
                     <Loader greeting={`Cargando ${categoryId}`} />
@@ -29,9 +30,16 @@ const ItemListContainer = () => {
             ) : (
                 <>
                     <SectionTitle section={categoryId ? categoryId : 'Productos Destacados' } />
-                    <BackBtn scrollBack={scrollBack}/>
-                    <ItemList data={data} />
-                    <FowardBtn scrollFoward={scrollFoward}/>
+                    {maxItemsShow ? (
+                        <>
+                            <BackBtn scrollBack={scrollBack}/>
+                            <ItemList data={data} />
+                            <FowardBtn scrollFoward={scrollForward}/>
+                        </>
+                    ) : (
+                            <ItemList data={data} />
+                        )
+                    }
                 </>
             )}
         </section>

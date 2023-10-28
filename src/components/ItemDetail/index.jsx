@@ -1,5 +1,5 @@
 import { useCartContext } from '../../hooks'
-import { ItemCount } from '../../components'
+import { ItemCount, MainBtn } from '../../components'
 import './styles.css'
 
 const ItemDetail = ({ product, onAddPopUp }) => {
@@ -28,6 +28,7 @@ const ItemDetail = ({ product, onAddPopUp }) => {
                         <p className="detail__stock">{stock} in stock</p>
                     </div>
                 <ItemCount avaiableStock={stock} onAdd={handleOnAdd} />
+                <MainBtn text='Volver' />
             </div>
         </>
     )

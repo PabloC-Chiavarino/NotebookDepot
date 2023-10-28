@@ -1,6 +1,5 @@
 .default_container {
-    position: absolute;
-    height: 95vh;
+    height: 16vh;
     width: 100vw;
     display: flex;
     flex-direction: column;

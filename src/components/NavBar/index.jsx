@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { OpacityDiv, CartWidget, Slider } from "../../components";
+import { UserWidget, UserMenu, CartWidget, Slider, OpacityDiv } from "../../components";
 import "./styles.css";
 
 const NavBar = () => {
-  const [ shownState, setShownState ] = useState(false)
-  const handleState = () => setShownState(!shownState)
+  const [ showMenu, setShowMenu ] = useState(false)
+  const [ showCart, setShowCart ] = useState(false)
+  const handleShowCart = () => setShowCart(!showCart)
+  const handleShowUser = () => setShowMenu(!showMenu)
   
   return (
     <>
@@ -22,11 +24,13 @@ const NavBar = () => {
             <NavLink to={'/categories/professional'} className="categories"><li>Diseño y desarrollo</li></NavLink>
             <NavLink to={'/categories/gaming'} className="categories"><li>Gaming</li></NavLink>
           </ul>
-          <CartWidget handleOnClick={handleState} />
-          <Slider show={shownState} onClose={handleState}/>
+          <UserWidget handleOnClick={handleShowUser} />
+          <UserMenu show={showMenu} onClose={handleShowUser} />
+          <CartWidget handleOnClick={handleShowCart} />
+          <Slider show={showCart} onClose={handleShowCart}/>
         </div>
       </nav>
-      <OpacityDiv show={shownState} handleOnClick={handleState} />
+      <OpacityDiv show={showCart} handleOnClick={handleShowCart} />
     </>
   )
 }

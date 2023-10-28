@@ -19,7 +19,6 @@ const ContactForm = () => {
   }
 
   return (
-      <section>
         <form className='contactForm__container' ref={formRef} onSubmit={sendEmail}>  
           <h2 className='contactForm__title'>Necesitás ascesoramiento?</h2>
           <h3 className='contactForm__title'>Dejanos tu consulta y te responderemos a la brevedad !</h3>
@@ -33,7 +32,6 @@ const ContactForm = () => {
           <textarea className='contactForm__msg' name="message" minLength="20" maxLength="100" cols="40" rows="6" placeholder='Tus comentarios me ayudan a mejorar el proyecto ! con gusto los recibiré y responderé a la brevedad posible !' required/>
           <input className='contactForm__submit' type="submit" value="Enviar" />
         </form> 
-      </section>
   )
 }
 

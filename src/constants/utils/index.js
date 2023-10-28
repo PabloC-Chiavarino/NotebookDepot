@@ -20,4 +20,4 @@ export const mailConfirmErr = () => {
         title: 'Oops...',
         text: 'El email de confirmacion debe ser igual al ingresado',
     })
-} 
+}

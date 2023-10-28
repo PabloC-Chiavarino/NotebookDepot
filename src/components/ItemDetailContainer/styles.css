@@ -1,7 +1,7 @@
 .product__Detailcontainer {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 30vh;
     width: 100%;
     justify-content: center;
     align-items: center;
