@@ -6,8 +6,15 @@ import "./styles.css";
 const NavBar = () => {
   const [ showMenu, setShowMenu ] = useState(false)
   const [ showCart, setShowCart ] = useState(false)
-  const handleShowCart = () => setShowCart(!showCart)
-  const handleShowUser = () => setShowMenu(!showMenu)
+  const handleShowCart = () => {
+    setShowCart(!showCart)
+    if (showMenu) {
+      setShowMenu(!showMenu)
+    }
+  }
+  const handleShowUser = () => {
+    setShowMenu(!showMenu)
+  }
   
   return (
     <>
