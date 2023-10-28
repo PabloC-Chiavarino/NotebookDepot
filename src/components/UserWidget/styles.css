@@ -1,7 +1,11 @@
 .userWidget__container {
     display: flex;
-    align-self: center;
-    right: 6.5rem;
+    align-items: center;
+    right: 4.6rem;
     position: absolute;
     cursor: pointer;
+    height: inherit;
+    width: 75px;
+    justify-content: center;
+    z-index: 1;
 }    

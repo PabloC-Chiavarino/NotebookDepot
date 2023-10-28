@@ -1,23 +1,21 @@
 .slider__container {
     width: 25%;
     height: 100%;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: 0%;
-    z-index: 6;
+    right: 0;
     background-color: ghostwhite;
     font-family: 'wix madefor display', sans-serif;
     background-color: #dcdcdc;
     transition: 0.2s ease-in-out;
     user-select: none;
-    border: 1px solid rgb(40, 40, 40);
 }
 
 .slider__closeButton {
     position: absolute;
-    right: 35px;
+    top: 1rem;
     color:black;
     transition: 0.2s ease-out;
     font-size: 18px;
@@ -32,7 +30,7 @@
     border-bottom: 1px solid black;
     padding-bottom: 1rem;
     color: #484848;
-    width: 95%;
+    width: 100%;
     font-size: 26px;
 }
 

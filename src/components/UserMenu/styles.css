@@ -1,14 +1,12 @@
 .userMenu__container {
     display: flex;
-    width: 250px;
-    height: 353px;
+    justify-content: center;
+    width: 25%;
+    height: 100vh;
+    padding: 2rem;
     background-color: #dcdcdc;
-    border: 1px solid black;
-    position: absolute;
-    top: 70px;
-    right: 0rem;
-    border-bottom: 1px solid;
-    border-left: 1px solid;
+    position: fixed;
+    right: 0;
     transform: translate(100%);
     transition: 0.2s ease-in-out;
 }
@@ -16,7 +14,7 @@
 .userMenu__close {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    left: 1.5rem;
     cursor: pointer;
     z-index: 1;
     font-size: 18px;
@@ -31,8 +29,8 @@
 }
 
 .userMenu__accountIcon {
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
     align-self: end;
 }
 
@@ -40,8 +38,8 @@
     font-size: 1.25rem;
     width: 100%;
     position: absolute;
-    bottom: 8rem;
     text-align: center;
+    align-self: center;
 }
 
 .userMenu__options--container {
@@ -49,15 +47,15 @@
     position: absolute;
     flex-direction: column;
     row-gap: 10px;
-    bottom: 2rem;
+    bottom: 7rem;
     width: 100%;
     align-items: center;
 }
 
 .userMenu__button {
-    height: 35px;
+    height: 44px;
     text-decoration: none;
-    width: 180px;
+    width: 225px;
     font-family: 'wix madefor display', sans-serif;
     color: #292929;
     border: 1px solid;

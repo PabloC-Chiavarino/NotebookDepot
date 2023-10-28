@@ -16,7 +16,7 @@ const CartWidget = ({ handleOnClick }) => {
         >
           {cartTotalProducts()}
         </div>
-        <img className="cartContainer__img" src={cartImg} alt="" />
+        <img src={cartImg} alt="" />
       </div>
     </>
   );

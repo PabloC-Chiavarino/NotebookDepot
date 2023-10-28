@@ -14,6 +14,9 @@ const NavBar = () => {
   }
   const handleShowUser = () => {
     setShowMenu(!showMenu)
+    if (showCart) {
+      setShowCart(!showCart)
+    }
   }
   
   return (
