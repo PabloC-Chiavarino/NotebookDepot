@@ -31,13 +31,13 @@
     height: 100%;
     z-index: 2;
     justify-content: center;
-}
+  }
 
 .loader__container--ellipsis {
     width: 67px;
     height: 13px;
     position: absolute;
-    top: 80px;
+    bottom: 21rem;
 }
 
 .loader__container--ellipsis div {
@@ -71,7 +71,7 @@
 .loader__container span {
     position: absolute;
     height: fit-content;
-    top: 110px;
+    bottom: 18rem;
     font-family: 'wix madefor display', sans-serif;
     letter-spacing: 1px;
     font-weight: unset;

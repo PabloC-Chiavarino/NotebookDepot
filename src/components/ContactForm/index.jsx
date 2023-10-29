@@ -29,7 +29,7 @@ const ContactForm = () => {
           <input className='contactForm__input' type="email" name="user_email" required/>
 
           <label className='contactForm__label'>Mensaje</label>
-          <textarea className='contactForm__msg' name="message" minLength="20" maxLength="100" cols="40" rows="6" placeholder='Tus comentarios me ayudan a mejorar el proyecto ! con gusto los recibiré y responderé a la brevedad posible !' required/>
+          <textarea className='contactForm__msg' name="message" minLength="20" cols="40" rows="6" placeholder='Tus comentarios me ayudan a mejorar el proyecto ! con gusto los recibiré y responderé a la brevedad posible !' required/>
           <input className='contactForm__submit' type="submit" value="Enviar" />
         </form> 
   )

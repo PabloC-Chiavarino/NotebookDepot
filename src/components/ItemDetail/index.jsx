@@ -28,7 +28,9 @@ const ItemDetail = ({ product, onAddPopUp }) => {
                         <p className="detail__stock">{stock} in stock</p>
                     </div>
                 <ItemCount avaiableStock={stock} onAdd={handleOnAdd} />
-                <MainBtn text='Volver' />
+                <div className='detail__mainBtn--container'>
+                    <MainBtn text='Volver' />
+                </div>
             </div>
         </>
     )
